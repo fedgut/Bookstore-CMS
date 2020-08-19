@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './Book';
 
 function BooksList(props) {
   const { books } = props;
@@ -10,7 +11,7 @@ function BooksList(props) {
         <th>Category</th>
       </tr>
       {
-        books.map(book => ( <Book key={book.id} book={book} /> ))
+        books.map(book => (<Book key={book.id} book={book} />))
       }
     </table>
   );

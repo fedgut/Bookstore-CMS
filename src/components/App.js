@@ -1,13 +1,14 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import PropTypes from 'prop-types';
+import BooksForm from './BookForm';
+import BooksList from './BooksList';
 
-function App() {
+function App(props) {
+  const { books } = props;
   return (
-  <div className="App">
-    <BooksList />
-    <BooksForm />
-  </div>
+    <div className="App">
+      <BooksList books={books} />
+      <BooksForm />
+    </div>
   );
 }
 

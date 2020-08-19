@@ -1,13 +1,11 @@
-const createBook = (state, action) => {
-  return [
-    ...state,
-    {
-      id: action.id,
-      title: action.title,
-      category: action.category,
-    },
-  ];
-};
+const createBook = (state, action) => [
+  ...state,
+  {
+    id: action.id,
+    title: action.title,
+    category: action.category,
+  },
+];
 
 const removeBook = (state, action) => state.filter(book => book.id !== action.id);
 
