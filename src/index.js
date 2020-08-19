@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import books from './reducers/books';
 import App from './components/App';
 import './index.css';
 
 const getRandomInt = () => Math.floor(Math.random() * Math.floor(214748364));
 
-const initialState = [
+const initialBookState = [
   {
     id: getRandomInt(),
     title: 'Fahrenheit 451',
@@ -41,13 +41,11 @@ const initialState = [
   },
 ];
 
-const rootReducer = combineReducers({ books });
-
-const store = createStore(rootReducer);
+const store = createStore(books, initialBookState);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App books={initialState} />
+    <App books={store.getState()} />
   </Provider>,
   document.getElementById('root'),
 );

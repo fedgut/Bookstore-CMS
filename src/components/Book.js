@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Book(props) {
   const { key, book } = props;
@@ -10,5 +11,10 @@ function Book(props) {
     </tr>
   );
 }
+
+Book.propTypes = {
+  key: PropTypes.number.isRequired,
+  book: PropTypes.isRequired,
+};
 
 export default Book;

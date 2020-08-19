@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BooksForm from './BookForm';
 import BooksList from './BooksList';
 
@@ -11,5 +12,9 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  books: PropTypes.isRequired,
+};
 
 export default App;

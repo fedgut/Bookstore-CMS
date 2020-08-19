@@ -9,7 +9,7 @@ const createBook = (state, action) => [
 
 const removeBook = (state, action) => state.filter(book => book.id !== action.id);
 
-const books = (state = [], action) => {
+const books = (state = [], action = '') => {
   switch (action.type) {
     case 'CREATE_BOOK':
       return createBook(state, action);

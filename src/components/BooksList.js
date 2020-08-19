@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
 function BooksList(props) {
@@ -16,5 +17,9 @@ function BooksList(props) {
     </table>
   );
 }
+
+BooksList.propTypes = {
+  books: PropTypes.isRequired,
+};
 
 export default BooksList;
