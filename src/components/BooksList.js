@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Book from './Book';
 import { connect } from 'react-redux';
+import Book from './Book';
 
 function BooksList(props) {
   const { books } = props;
@@ -26,7 +26,7 @@ BooksList.propTypes = {
 function mapStateToProps(state) {
   return {
     books: state.books,
-  }
+  };
 }
 
 export default connect(mapStateToProps)(BooksList);
