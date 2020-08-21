@@ -1,3 +1,5 @@
+import generateId from '../helpers/getRandomInt';
+
 const createBook = (state, action) => [
   ...state,
   {
@@ -9,36 +11,34 @@ const createBook = (state, action) => [
 
 const removeBook = (state, action) => state.filter(book => book.id !== action.id);
 
-const getRandomInt = () => Math.floor(Math.random() * Math.floor(214748364));
-
 const initialBookState = [
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: 'Fahrenheit 451',
     category: 'Sci-Fi',
   },
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: '1984',
     category: 'Sci-Fi',
   },
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: 'Brave New World',
     category: 'Sci-Fi',
   },
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: 'Dr. Frankesntein',
     category: 'Sci-Fi',
   },
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: 'Dracula',
     category: 'Horror',
   },
   {
-    id: getRandomInt(),
+    id: generateId(),
     title: 'Metodos Numericos Para Ingenieria',
     category: 'Learning',
   },
