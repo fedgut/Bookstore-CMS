@@ -1,9 +1,11 @@
-export const createBook = book => ({
-  type: 'CREATE_BOOK',
-  book,
+import generateId from '../helpers/getRandomInt';
+
+export const removeBook = id => ({
+  type: 'REMOVE_BOOK',
+  id,
 });
 
-export const removeBook = book => ({
-  type: 'REMOVE_BOOK',
-  book,
+export const createBook = book => ({
+  type: 'ADD_BOOK',
+  book: { id: generateId(), ...book },
 });
