@@ -4,9 +4,10 @@ import { PropTypes } from 'prop-types';
 import { createBook } from '../actions/index';
 
 class BookForm extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.categories = [
+      '',
       'Action',
       'Biography',
       'History',
@@ -63,8 +64,11 @@ BookForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  handleSubmit: (title, category) => dispatch(createBook({ title, category })),
-});
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    handleSubmit: (title, category) => dispatch(createBook({ title, category })),
+  };
+}
 
 export default connect(null, mapDispatchToProps)(BookForm);

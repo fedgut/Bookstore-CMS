@@ -6,6 +6,6 @@ export const removeBook = id => ({
 });
 
 export const createBook = book => ({
-  type: 'ADD_BOOK',
+  type: 'CREATE_BOOK',
   book: { id: generateId(), ...book },
 });
