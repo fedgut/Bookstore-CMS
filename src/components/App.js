@@ -1,25 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import BooksForm from './BookForm';
-import BooksList from './BooksList';
+import BooksForm from '../containers/BookForm';
+import BooksList from '../containers/BooksList';
 
-function App(props) {
-  const { books } = props;
+function App() {
   return (
     <div className="App">
-      <BooksList books={books} />
+      <BooksList />
       <BooksForm />
     </div>
   );
 }
 
-App.propTypes = {
-  books: PropTypes.isRequired,
-};
-
-const mapStateToProps = state => ({
-  books: state.books,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
