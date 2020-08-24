@@ -12,9 +12,7 @@ const stateFull = [
 
 const actionCreate = {
   type: 'CREATE_BOOK',
-  id: 1,
-  title: 'some title',
-  category: 'Sci-Fi',
+  book: { id: 1, title: 'some title', category: 'Sci-Fi' },
 };
 
 const actionRemove = {
