@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { createBook } from '../actions/index';
 
 class BookForm extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.categories = [
       '',
@@ -21,6 +21,7 @@ class BookForm extends React.Component {
       category: '',
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -35,25 +36,33 @@ class BookForm extends React.Component {
     }
   }
 
-  render() {
+  handleSubmit(event) {
     const { category, title } = this.state;
-    const { handleSubmit } = this.props;
+    const { createBook } = this.props;
+    event.preventDefault();
+    createBook({ title, category });
+    this.setState({ title: '', category: '' });
+  }
+
+  render() {
+    const { title, category } = this.state;
     return (
       <div>
-        <form onChange={this.handleChange}>
-          <input type="text" name="title" id="title" placeholder="Title" />
-          <select name="category" id="category">
+        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          <input type="text" name="title" id="title" placeholder="Title" value={title} />
+          <select name="category" id="category" value={category}>
             {this.categories.map(category => (
               <option key={`${category}`} value={`${category}`}>
                 {`${category}`}
               </option>
             ))}
           </select>
-          <input
+          <button
             type="submit"
-            value="Submit"
-            onClick={handleSubmit(title, category)}
-          />
+            value="submit"
+          >
+            Submit
+          </button>
         </form>
       </div>
     );
@@ -61,13 +70,12 @@ class BookForm extends React.Component {
 }
 
 BookForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
+  createBook: PropTypes.func.isRequired,
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
-    handleSubmit: (title, category) => dispatch(createBook({ title, category })),
+    createBook: book => dispatch(createBook(book)),
   };
 }
 
