@@ -20,7 +20,6 @@ class BookForm extends React.Component {
       category: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -35,13 +34,9 @@ class BookForm extends React.Component {
     }
   }
 
-  handleSubmit() {
-    const { category, title } = this.state;
-    const { createBook } = this.props;
-    createBook({ category, title });
-  }
-
   render() {
+    const { category, title } = this.state;
+    const { handleSubmit } = this.props;
     return (
       <div>
         <form onChange={this.handleChange}>
@@ -53,7 +48,7 @@ class BookForm extends React.Component {
               </option>
             ))}
           </select>
-          <input type="submit" value="Submit" onClick={this.handleSubmit} />
+          <input type="submit" value="Submit" onClick={handleSubmit(title, category)} />
         </form>
       </div>
     );
@@ -61,9 +56,11 @@ class BookForm extends React.Component {
 }
 
 BookForm.propTypes = {
-  createBook: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => dispatch(createBook);
+const mapDispatchToProps = dispatch => ({
+  handleSubmit: (title, category) => dispatch(createBook({ title, category })),
+});
 
 export default connect(null, mapDispatchToProps)(BookForm);
