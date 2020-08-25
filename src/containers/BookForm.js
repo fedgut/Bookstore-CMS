@@ -26,8 +26,7 @@ class BookForm extends React.Component {
 
   handleChange(event) {
     const { target } = event;
-    const { value } = target;
-    const { name } = target;
+    const { value, name } = target;
     this.setState({
       [name]: value,
     });
@@ -45,19 +44,17 @@ class BookForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="title"
             id="title"
             placeholder="Title"
             value={title}
-            onChange={this.handleChange}
           />
           <select
             name="category"
             id="category"
-            onChange={this.handleChange}
             value={category}
           >
             {this.categories.map(category => (
