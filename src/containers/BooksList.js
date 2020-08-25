@@ -31,14 +31,16 @@ class BooksList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {books.map(book => (
-              <Book
-                key={book.id}
-                id={book.id}
-                book={book}
-                handleClick={this.handleClick}
-              />
-            ))}
+            {books
+              .filter(book => book.category === filters)
+              .map(book => (
+                <Book
+                  key={book.id}
+                  id={book.id}
+                  book={book}
+                  handleClick={this.handleClick}
+                />
+              ))}
           </tbody>
         </table>
         <CategoryFilter />
@@ -51,6 +53,7 @@ BooksList.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   books: PropTypes.array.isRequired,
   removeBook: PropTypes.func.isRequired,
+  filters: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({
