@@ -2,20 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { createBook } from '../actions/index';
+import { CATEGORIES } from '../constants';
 
 class BookForm extends React.Component {
   constructor() {
     super();
-    this.categories = [
-      '',
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
+    this.categories = CATEGORIES;
     this.state = {
       title: '',
       category: '',

@@ -1,3 +1,4 @@
+import { CREATE_BOOK, REMOVE_BOOK } from '../constants';
 import generateId from '../helpers/getRandomInt';
 
 const createBook = (state, action) => [
@@ -46,9 +47,9 @@ const initialBookState = [
 
 const books = (state = initialBookState, action = '') => {
   switch (action.type) {
-    case 'CREATE_BOOK':
+    case CREATE_BOOK:
       return createBook(state, action);
-    case 'REMOVE_BOOK':
+    case REMOVE_BOOK:
       return removeBook(state, action);
     default:
       return state;
