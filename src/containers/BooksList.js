@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { removeBook } from '../actions/index';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
 
 class BooksList extends React.Component {
   constructor() {
@@ -18,27 +19,30 @@ class BooksList extends React.Component {
   }
 
   render() {
-    const { books } = this.props;
+    const { books, filters } = this.props;
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.map(book => (
-            <Book
-              key={book.id}
-              id={book.id}
-              book={book}
-              handleClick={this.handleClick}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {books.map(book => (
+              <Book
+                key={book.id}
+                id={book.id}
+                book={book}
+                handleClick={this.handleClick}
+              />
+            ))}
+          </tbody>
+        </table>
+        <CategoryFilter />
+      </div>
     );
   }
 }
@@ -51,6 +55,7 @@ BooksList.propTypes = {
 
 const mapStateToProps = state => ({
   books: state.books,
+  filters: state.filters,
 });
 
 const mapDispatchToProps = dispatch => ({

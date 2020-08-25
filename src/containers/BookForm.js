@@ -7,7 +7,6 @@ import { CATEGORIES } from '../constants';
 class BookForm extends React.Component {
   constructor() {
     super();
-    this.categories = CATEGORIES;
     this.state = {
       title: '',
       category: '',
@@ -51,7 +50,7 @@ class BookForm extends React.Component {
             id="category"
             value={category}
           >
-            {this.categories.map(category => (
+            {CATEGORIES.map(category => (
               <option key={`${category}`} value={`${category}`}>
                 {`${category}`}
               </option>
