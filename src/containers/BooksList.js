@@ -14,7 +14,7 @@ class BooksList extends React.Component {
   handleClick(event) {
     const { id } = event.target;
     const { removeBook } = this.props;
-    removeBook(Number(id));
+    removeBook(id);
   }
 
   render() {

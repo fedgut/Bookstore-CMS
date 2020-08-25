@@ -9,7 +9,7 @@ const createBook = (state, action) => [
   },
 ];
 
-const removeBook = (state, action) => state.filter(book => book.id !== action.id);
+const removeBook = (state, action) => state.filter(book => book.id !== Number(action.id));
 
 const initialBookState = [
   {
