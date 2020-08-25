@@ -11,7 +11,6 @@ class BooksList extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // eslint-disable-next-line class-methods-use-this
   handleClick(event) {
     const { id } = event.target;
     const { removeBook } = this.props;
