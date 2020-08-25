@@ -10,12 +10,30 @@ class BooksList extends React.Component {
     super();
     this.state = {};
     this.handleClick = this.handleClick.bind(this);
+    this.filterHelper = this.filterHelper.bind(this);
   }
 
   handleClick(event) {
     const { id } = event.target;
     const { removeBook } = this.props;
     removeBook(id);
+  }
+
+  filterHelper(bookArray, filters) {
+    let newArray = [];
+    if(filters){
+      newArray = bookArray
+      .filter(book => book.category === filters);
+    } else {
+      newArray = [...bookArray];
+    }
+    return newArray.map(book => (
+      <Book
+        key={book.id}
+        id={book.id}
+        book={book}
+        handleClick={this.handleClick}
+      />));
   }
 
   render() {
@@ -31,16 +49,7 @@ class BooksList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {books
-              .filter(book => book.category === filters)
-              .map(book => (
-                <Book
-                  key={book.id}
-                  id={book.id}
-                  book={book}
-                  handleClick={this.handleClick}
-                />
-              ))}
+            {this.filterHelper(books, filters)}
           </tbody>
         </table>
         <CategoryFilter />
