@@ -11,14 +11,16 @@ const SVG = () => (
 );
 
 function Book(props) {
-  const { key, book, handleClick } = props;
+  const {
+    book, handleClick, id,
+  } = props;
   return (
-    <tr key={`book-${key}`}>
+    <tr>
       <td>{book.id}</td>
       <td>{book.title}</td>
       <td>{book.category}</td>
       <td>
-        <button type="button" onClick={handleClick}>
+        <button id={`${id}`} type="button" onClick={handleClick}>
           <SVG />
         </button>
       </td>
@@ -27,8 +29,9 @@ function Book(props) {
 }
 
 Book.propTypes = {
-  key: PropTypes.number.isRequired,
-  book: PropTypes.isRequired,
+  id: PropTypes.number.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  book: PropTypes.object.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
 

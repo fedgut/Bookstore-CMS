@@ -44,15 +44,17 @@ class BookForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div>
-        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="title"
             id="title"
             placeholder="Title"
             value={title}
+            onChange={this.handleChange}
           />
           <select
+            onChange={this.handleChange}
             name="category"
             id="category"
             value={category}

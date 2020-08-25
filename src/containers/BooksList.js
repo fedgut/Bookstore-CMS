@@ -10,6 +10,12 @@ class BooksList extends React.Component {
     this.state = {};
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  handleClick(event) {
+    const { id } = event.target;
+    removeBook(id);
+  }
+
   render() {
     const { books } = this.props;
     return (
@@ -23,7 +29,12 @@ class BooksList extends React.Component {
         </thead>
         <tbody>
           {books.map(book => (
-            <Book key={book.id} id={book.id} book={book} />
+            <Book
+              key={book.id}
+              id={book.id}
+              book={book}
+              handleClick={this.handleClick}
+            />
           ))}
         </tbody>
       </table>
@@ -32,7 +43,8 @@ class BooksList extends React.Component {
 }
 
 BooksList.propTypes = {
-  books: PropTypes.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  books: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = state => ({
