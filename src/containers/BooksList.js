@@ -8,12 +8,14 @@ class BooksList extends React.Component {
   constructor() {
     super();
     this.state = {};
+    this.handleClick = this.handleClick.bind(this);
   }
 
   // eslint-disable-next-line class-methods-use-this
   handleClick(event) {
     const { id } = event.target;
-    removeBook(id);
+    const { removeBook } = this.props;
+    removeBook(Number(id));
   }
 
   render() {
@@ -45,6 +47,7 @@ class BooksList extends React.Component {
 BooksList.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   books: PropTypes.array.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
