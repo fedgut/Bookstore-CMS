@@ -50,7 +50,8 @@ class BookForm extends React.Component {
             id="category"
             value={category}
           >
-            {CATEGORIES.map(category => (
+            <option selected> Select category </option>
+            {[...CATEGORIES.slice(1)].map(category => (
               <option key={`${category}`} value={`${category}`}>
                 {`${category}`}
               </option>
