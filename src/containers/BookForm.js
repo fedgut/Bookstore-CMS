@@ -25,15 +25,12 @@ class BookForm extends React.Component {
   }
 
   handleChange(event) {
-    if (event.target.id === 'title') {
-      this.setState({
-        title: event.target.value,
-      });
-    } else if (event.target.id === 'category') {
-      this.setState({
-        category: event.target.value,
-      });
-    }
+    const { target } = event;
+    const { value } = target;
+    const { name } = target;
+    this.setState({
+      [name]: value,
+    });
   }
 
   handleSubmit(event) {
@@ -48,19 +45,28 @@ class BookForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div>
-        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
-          <input type="text" name="title" id="title" placeholder="Title" value={title} />
-          <select name="category" id="category" value={category}>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+            value={title}
+            onChange={this.handleChange}
+          />
+          <select
+            name="category"
+            id="category"
+            onChange={this.handleChange}
+            value={category}
+          >
             {this.categories.map(category => (
               <option key={`${category}`} value={`${category}`}>
                 {`${category}`}
               </option>
             ))}
           </select>
-          <button
-            type="submit"
-            value="submit"
-          >
+          <button type="submit" value="submit">
             Submit
           </button>
         </form>
