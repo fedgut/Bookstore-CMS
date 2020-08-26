@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 function Book(props) {
   const { book, handleClick, id } = props;
   return (
-    <li className="list-group-item my-2 border d-flex  justify-content-between ">
-      <div>
+    <li className="li-panel">
+      <div className="book-data">
         <div>
-          <div>{book.category}</div>
+          <div className="category">{book.category}</div>
           <div>{book.title}</div>
           <div>Generic Author</div>
         </div>
@@ -17,10 +17,11 @@ function Book(props) {
           <span>Edit</span>
         </div>
       </div>
-      <div className="d-flex flex-column mr-5">
-        <span>CURRENT CHAPTER</span>
-        <span>Chapter 17</span>
+      <div className="book-progress">
+        <span className="current-chapter">CURRENT CHAPTER</span>
+        <span className="chapter">Chapter 17</span>
         <button
+          className="button-text"
           variant="primary"
           id={`${id}`}
           type="button"
