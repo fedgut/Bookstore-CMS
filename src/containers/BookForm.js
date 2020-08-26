@@ -1,31 +1,110 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { createBook } from '../actions/index';
 
-const BookForm = () => {
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
+class BookForm extends React.Component {
+  constructor() {
+    super();
+    this.categories = [
+      '',
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
+    this.state = {
+      title: '',
+      category: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-  return (
-    <div>
-      <form>
-        <input type="text" name="title" id="title" placeholder="Title" />
-        <select name="category" id="category">
-          {categories.map(category => (
-            <option key={`${category}`} value={`${category}`}>
-              {`${category}`}
-            </option>
-          ))}
-        </select>
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
-  );
+  handleChange(event) {
+    const { target } = event;
+    const { value, name } = target;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit(event) {
+    const { category, title } = this.state;
+    const { createBook } = this.props;
+    const alertTitle = document.getElementById('alert-text-title');
+    const alertCategory = document.getElementById('alert-text-category');
+    event.preventDefault();
+    if (category && title) {
+      createBook({ title, category });
+      this.setState({ title: '', category: '' });
+      alertTitle.classList = ['alert-hidden'];
+      alertCategory.classList = ['alert-hidden'];
+    } else {
+      if (!title) {
+        alertTitle.classList = ['alert'];
+      } else {
+        alertTitle.classList = ['alert-hidden'];
+      }
+      if (!category) {
+        alertCategory.classList = ['alert'];
+      } else {
+        alertCategory.classList = ['alert-hidden'];
+      }
+    }
+  }
+
+  render() {
+    const { title, category } = this.state;
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+            value={title}
+            onChange={this.handleChange}
+          />
+          <select
+            onChange={this.handleChange}
+            name="category"
+            id="category"
+            value={category}
+          >
+            {this.categories.map(category => (
+              <option key={`${category}`} value={`${category}`}>
+                {`${category}`}
+              </option>
+            ))}
+          </select>
+          <button type="submit" value="submit">
+            Submit
+          </button>
+        </form>
+        <p id="alert-text-title" className="alert-hidden">
+          Please write a title for the book you want to add.
+        </p>
+        <p id="alert-text-category" className="alert-hidden">
+          Please select a category for the book you want to add.
+        </p>
+      </div>
+    );
+  }
+}
+
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
 };
 
-export default BookForm;
+function mapDispatchToProps(dispatch) {
+  return {
+    createBook: book => dispatch(createBook(book)),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(BookForm);

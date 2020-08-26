@@ -3,13 +3,13 @@ import generateId from '../helpers/getRandomInt';
 const createBook = (state, action) => [
   ...state,
   {
-    id: action.id,
-    title: action.title,
-    category: action.category,
+    id: action.book.id,
+    title: action.book.title,
+    category: action.book.category,
   },
 ];
 
-const removeBook = (state, action) => state.filter(book => book.id !== action.id);
+const removeBook = (state, action) => state.filter(book => book.id !== Number(action.id));
 
 const initialBookState = [
   {

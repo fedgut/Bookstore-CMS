@@ -1,4 +1,4 @@
-import books from './books';
+import books from '../reducers/books';
 
 const stateEmpty = [];
 
@@ -12,9 +12,7 @@ const stateFull = [
 
 const actionCreate = {
   type: 'CREATE_BOOK',
-  id: 1,
-  title: 'some title',
-  category: 'Sci-Fi',
+  book: { id: 1, title: 'some title', category: 'Sci-Fi' },
 };
 
 const actionRemove = {
