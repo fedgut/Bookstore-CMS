@@ -227,5 +227,16 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
-  padding-right: 34px;
+}
+
+.remove {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+}
+
+.book-options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

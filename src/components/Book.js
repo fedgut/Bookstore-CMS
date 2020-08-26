@@ -11,25 +11,26 @@ function Book(props) {
           <div className="book-title">{book.title}</div>
           <div className="book-author">Generic Author</div>
         </div>
-        <div>
+        <div className="book-options-container">
           <span className="book-options">Comment</span>
-          <span className="book-options">Remove</span>
+          <button
+            type="button"
+            className="book-options remove"
+            id={`${id}`}
+            onClick={handleClick}
+          >
+            Remove
+          </button>
           <span className="book-options">Edit</span>
         </div>
       </div>
       <div className="place-holder-square">Place Holder Square</div>
-      <div className="separation-bar"></div>
+      <div className="separation-bar" />
       <div className="book-progress">
         <span className="current-chapter">CURRENT CHAPTER</span>
         <span className="chapter">Chapter 17</span>
-        <button
-          className="button-text"
-          variant="primary"
-          id={`${id}`}
-          type="button"
-          onClick={handleClick}
-        >
-          DELETE
+        <button className="button-text" variant="primary" type="button">
+          UPDATE PROGRESS
         </button>
       </div>
     </li>
