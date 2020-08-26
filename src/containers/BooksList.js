@@ -4,7 +4,6 @@ import { PropTypes } from 'prop-types';
 import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
-import { CATEGORIES } from '../constants';
 
 class BooksList extends React.Component {
   constructor() {
