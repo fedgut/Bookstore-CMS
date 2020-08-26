@@ -1,6 +1,6 @@
 import { CHANGE_FILTER } from '../constants';
 
-const initialFilterState = '';
+const initialFilterState = 'All';
 
 const changeFilter = (state, action) => String(action.category);
 

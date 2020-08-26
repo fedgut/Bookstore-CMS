@@ -23,18 +23,12 @@ class BooksList extends React.Component {
   handleChange(event) {
     const { changeFilter } = this.props;
     const category = event.target.value;
-    let key = '';
-    if (category === CATEGORIES[0]) {
-      key = '';
-    } else {
-      key = category;
-    }
-    changeFilter(key);
+    changeFilter(category);
   }
 
   filterHelper(bookArray, filters) {
     let newArray = [];
-    if (filters) {
+    if (filters !== 'All') {
       newArray = bookArray.filter(book => book.category === filters);
     } else {
       newArray = [...bookArray];

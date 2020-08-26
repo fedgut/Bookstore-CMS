@@ -6,7 +6,7 @@ export default function CategoryFilter(props) {
   const { handleChange } = props;
   return (
     <select onChange={handleChange}>
-      {CATEGORIES.map(category => (
+      {['All', ...CATEGORIES].map(category => (
         <option key={category} value={`${category}`}>
           {category}
         </option>
