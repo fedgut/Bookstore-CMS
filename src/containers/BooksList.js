@@ -9,7 +9,6 @@ import { CATEGORIES } from '../constants';
 class BooksList extends React.Component {
   constructor() {
     super();
-    this.state = {};
     this.handleClick = this.handleClick.bind(this);
     this.filterHelper = this.filterHelper.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -64,7 +63,7 @@ class BooksList extends React.Component {
           </thead>
           <tbody>{this.filterHelper(books, filters)}</tbody>
         </table>
-        <CategoryFilter onChange={this.handleChange} />
+        <CategoryFilter handleChange={this.handleChange} />
       </div>
     );
   }
