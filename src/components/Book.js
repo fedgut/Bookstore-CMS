@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
 
 function Book(props) {
   const { book, handleClick, id } = props;
@@ -21,14 +20,14 @@ function Book(props) {
       <div className="d-flex flex-column mr-5">
         <span>CURRENT CHAPTER</span>
         <span>Chapter 17</span>
-        <Button
+        <button
           variant="primary"
           id={`${id}`}
           type="button"
           onClick={handleClick}
         >
           Delete
-        </Button>
+        </button>
       </div>
     </li>
   );
