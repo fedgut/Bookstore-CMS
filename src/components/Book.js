@@ -8,15 +8,17 @@ function Book(props) {
       <div className="book-data">
         <div>
           <div className="category">{book.category}</div>
-          <div>{book.title}</div>
-          <div>Generic Author</div>
+          <div className="book-title">{book.title}</div>
+          <div className="book-author">Generic Author</div>
         </div>
         <div>
-          <span>Comment</span>
-          <span>Remove</span>
-          <span>Edit</span>
+          <span className="book-options">Comment</span>
+          <span className="book-options">Remove</span>
+          <span className="book-options">Edit</span>
         </div>
       </div>
+      <div className="place-holder-square">Place Holder Square</div>
+      <div className="separation-bar"></div>
       <div className="book-progress">
         <span className="current-chapter">CURRENT CHAPTER</span>
         <span className="chapter">Chapter 17</span>
@@ -27,7 +29,7 @@ function Book(props) {
           type="button"
           onClick={handleClick}
         >
-          Delete
+          DELETE
         </button>
       </div>
     </li>

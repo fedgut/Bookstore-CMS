@@ -11,7 +11,7 @@ function App() {
           <div className="books-button">BOOKS</div>
           <div className="categories-button">CATEGORIES</div>
           <div className="user-icon">
-            <i className="fa fa-user"></i>
+            <i className="fa fa-spinner"></i>
           </div>
         </nav>
         <BooksList />
