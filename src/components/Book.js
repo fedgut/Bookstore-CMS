@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
 
 function Book(props) {
   const {
@@ -11,9 +12,14 @@ function Book(props) {
       <td>{book.title}</td>
       <td>{book.category}</td>
       <td>
-        <button id={`${id}`} type="button" onClick={handleClick}>
+        <Button
+          variant="primary"
+          id={`${id}`}
+          type="button"
+          onClick={handleClick}
+        >
           Delete
-        </button>
+        </Button>
       </td>
     </tr>
   );
