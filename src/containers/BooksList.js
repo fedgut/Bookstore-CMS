@@ -44,8 +44,7 @@ class BooksList extends React.Component {
 }
 
 BooksList.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  books: PropTypes.array.isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
 };
 
