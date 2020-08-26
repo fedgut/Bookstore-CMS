@@ -53,16 +53,7 @@ class BooksList extends React.Component {
     const { books, filters } = this.props;
     return (
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>Category</th>
-            </tr>
-          </thead>
-          <tbody>{this.filterHelper(books, filters)}</tbody>
-        </table>
+        <ul>{this.filterHelper(books, filters)}</ul>
         <CategoryFilter handleChange={this.handleChange} />
       </div>
     );
