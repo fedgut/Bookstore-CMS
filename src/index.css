@@ -23,16 +23,15 @@ body {
 .panel-bg {
   width: 1400px;
   border-radius: 4px;
-  background-color: var(--white);
   margin: 0 auto;
   background-color: #fafafa;
-  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
 
 .panel-nav {
   width: 1400px;
   height: 95px;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
 }
@@ -125,7 +124,7 @@ body {
   padding-left: 59px;
 }
 
-.current-chapter{
+.current-chapter {
   height: 18px;
   opacity: 0.5;
   font-family: 'Roboto Slab', serif;
@@ -171,7 +170,7 @@ body {
 
 .place-holder-square {
   background-color: #0290ff;
-  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
   width: 90px;
   height: 90px;
   margin-top: 38px;
