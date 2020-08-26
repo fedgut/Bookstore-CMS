@@ -35,9 +35,26 @@ class BookForm extends React.Component {
   handleSubmit(event) {
     const { category, title } = this.state;
     const { createBook } = this.props;
+    const alertTitle = document.getElementById('alert-text-title');
+    const alertCategory = document.getElementById('alert-text-category');
     event.preventDefault();
-    createBook({ title, category });
-    this.setState({ title: '', category: '' });
+    if (category && title) {
+      createBook({ title, category });
+      this.setState({ title: '', category: '' });
+      alertTitle.classList = ['alert-hidden'];
+      alertCategory.classList = ['alert-hidden'];
+    } else {
+      if (!title) {
+        alertTitle.classList = ['alert'];
+      } else {
+        alertTitle.classList = ['alert-hidden'];
+      }
+      if (!category) {
+        alertCategory.classList = ['alert'];
+      } else {
+        alertCategory.classList = ['alert-hidden'];
+      }
+    }
   }
 
   render() {
@@ -69,6 +86,12 @@ class BookForm extends React.Component {
             Submit
           </button>
         </form>
+        <p id="alert-text-title" className="alert-hidden">
+          Please write a title for the book you want to add.
+        </p>
+        <p id="alert-text-category" className="alert-hidden">
+          Please select a category for the book you want to add.
+        </p>
       </div>
     );
   }

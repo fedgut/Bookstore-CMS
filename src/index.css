@@ -1,3 +1,15 @@
 body {
   margin: 0;
 }
+
+.alert {
+  color: red;
+}
+
+.alert-hidden {
+  display: none;
+}
+
+.alert-border {
+  border-color: red;
+}
