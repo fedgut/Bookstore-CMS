@@ -13,3 +13,76 @@ body {
 .alert-border {
   border-color: red;
 }
+
+.Bookstore-CMS {
+  width: 1600px;
+  height: 1434px;
+  background-color: var(--pale-grey);
+}
+
+.panel-bg {
+  width: 1400px;
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+  margin: 0 auto;
+}
+
+.panel-nav {
+  width: 1400px;
+  height: 95px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+.bookstore-logo {
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin: 29px 0px 29px 100px;
+}
+
+.books-button {
+  width: 59px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin: 41px 0px 38px 47px;
+}
+
+.categories-button {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin: 41px 0px 38px 41px;
+}
+
+.user-icon {
+  width: 17px;
+  height: 17px;
+  color: #0290ff;
+  margin: 37px 113px 41px 678px;
+}
