@@ -83,6 +83,12 @@ class BookForm extends React.Component {
           <p id="alert-text-title" className="alert-hidden">Please write a title for the book you want to add.</p>
           <p id="alert-text-category" className="alert-hidden">Please select a category for the book you want to add.</p>
         </form>
+        <p id="alert-text-title" className="alert-hidden">
+          Please write a title for the book you want to add.
+        </p>
+        <p id="alert-text-category" className="alert-hidden">
+          Please select a category for the book you want to add.
+        </p>
       </div>
     );
   }

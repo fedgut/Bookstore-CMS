@@ -4,7 +4,6 @@ import { PropTypes } from 'prop-types';
 import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
-import { CATEGORIES } from '../constants';
 
 class BooksList extends React.Component {
   constructor() {
@@ -23,18 +22,12 @@ class BooksList extends React.Component {
   handleChange(event) {
     const { changeFilter } = this.props;
     const category = event.target.value;
-    let key = '';
-    if (category === CATEGORIES[0]) {
-      key = '';
-    } else {
-      key = category;
-    }
-    changeFilter(key);
+    changeFilter(category);
   }
 
   filterHelper(bookArray, filters) {
     let newArray = [];
-    if (filters) {
+    if (filters !== 'All') {
       newArray = bookArray.filter(book => book.category === filters);
     } else {
       newArray = [...bookArray];
@@ -69,8 +62,7 @@ class BooksList extends React.Component {
 }
 
 BooksList.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  books: PropTypes.array.isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
   filters: PropTypes.string.isRequired,
   changeFilter: PropTypes.func.isRequired,
