@@ -58,11 +58,11 @@ class BooksList extends React.Component {
           <div className="books-button">BOOKS</div>
           <CategoryFilter handleChange={this.handleChange} />
           <div className="user-icon">
-            <i className="fa fa-user"></i>
+            <i className="fa fa-user" />
           </div>
         </nav>
         <ul className="book-list">{this.filterHelper(books, filters)}</ul>
-        
+
       </div>
     );
   }

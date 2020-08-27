@@ -51,7 +51,7 @@ class BookForm extends React.Component {
   render() {
     const { title, category } = this.state;
     return (
-      <div class="form-container">
+      <div className="form-container">
         <h2 className="add-book">ADD NEW BOOK</h2>
         <form onSubmit={this.handleSubmit}>
           <input

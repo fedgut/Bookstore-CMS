@@ -282,7 +282,7 @@ body {
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: 'Montserrat', sans-serif;
   padding-left: 20px;
   letter-spacing: -0.15px;
@@ -294,10 +294,10 @@ body {
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   padding-left: 20px;
   letter-spacing: -0.15px;
-  color: #999999;
+  color: #999;
   font-family: 'Montserrat', sans-serif;
   margin-left: 34px;
 }
@@ -316,7 +316,6 @@ body {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
-  background-color: #0290ff;
   border: none;
   margin-left: 34px;
 }
