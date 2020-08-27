@@ -51,7 +51,8 @@ class BookForm extends React.Component {
   render() {
     const { title, category } = this.state;
     return (
-      <div>
+      <div class="form-container">
+        <h2 className="add-book">ADD NEW BOOK</h2>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -59,6 +60,7 @@ class BookForm extends React.Component {
             id="title"
             placeholder="Title"
             value={title}
+            className="add-book-input"
             onChange={this.handleChange}
           />
           <select
@@ -66,6 +68,7 @@ class BookForm extends React.Component {
             name="category"
             id="category"
             value={category}
+            className="category-select"
           >
             <option defaultValue> Select category </option>
             {[...CATEGORIES.slice(1)].map(category => (
@@ -74,7 +77,7 @@ class BookForm extends React.Component {
               </option>
             ))}
           </select>
-          <button type="submit" value="submit">
+          <button type="submit" value="submit" className="add-book-button">
             Submit
           </button>
           <p id="alert-text-title" className="alert-hidden">Please write a title for the book you want to add.</p>

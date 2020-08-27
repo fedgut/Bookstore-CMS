@@ -4,6 +4,7 @@ body {
 
 .alert {
   color: red;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .alert-hidden {
@@ -77,6 +78,7 @@ body {
   letter-spacing: 1.9px;
   color: #121212;
   margin: 41px 0 38px 41px;
+  background-color: inherit;
 }
 
 .user-icon {
@@ -250,4 +252,71 @@ body {
 .book-list {
   padding: 0;
   margin-left: 100px;
+}
+
+.add-book {
+  width: 174px;
+  height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.form-container {
+  border-top: solid 1px #e8e8e8;
+  margin: 40px 100px;
+  padding-bottom: 265px;
+}
+
+.vertical-line {
+  border: solid 1px #e8e8e8;
+}
+
+.add-book-input {
+  width: 634px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 20px;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.category-select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  padding-left: 20px;
+  letter-spacing: -0.15px;
+  color: #999999;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 34px;
+}
+
+.add-book-button {
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  margin-left: 34px;
 }

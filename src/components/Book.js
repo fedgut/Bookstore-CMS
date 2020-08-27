@@ -13,6 +13,7 @@ function Book(props) {
         </div>
         <div className="book-options-container">
           <span className="book-options">Comment</span>
+          <span className="vertical-line"></span>
           <button
             type="button"
             className="book-options remove"
@@ -21,6 +22,7 @@ function Book(props) {
           >
             Remove
           </button>
+          <span className="vertical-line"></span>
           <span className="book-options">Edit</span>
         </div>
       </div>
