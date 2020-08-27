@@ -65,7 +65,7 @@ body {
 }
 
 .categories-button {
-  width: 105px;
+  border: none;
   height: 16px;
   opacity: 0.5;
   font-family: 'Montserrat', sans-serif;
@@ -83,7 +83,7 @@ body {
   width: 17px;
   height: 17px;
   color: #0290ff;
-  margin: 37px 113px 41px 678px;
+  margin: 37px 113px 41px 670px;
 }
 
 .li-panel {
@@ -245,4 +245,9 @@ body {
   width: 2px;
   height: 24px;
   border: solid 1px #e8e8e8;
+}
+
+.book-list {
+  padding: 0;
+  margin-left: 100px;
 }
