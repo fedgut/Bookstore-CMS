@@ -1,4 +1,4 @@
-import books from '../reducers/books';
+import books from './books';
 
 const stateEmpty = [];
 

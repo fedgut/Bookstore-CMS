@@ -2,20 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { createBook } from '../actions/index';
+import { CATEGORIES } from '../constants';
 
 class BookForm extends React.Component {
   constructor() {
     super();
-    this.categories = [
-      '',
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
     this.state = {
       title: '',
       category: '',
@@ -76,7 +67,8 @@ class BookForm extends React.Component {
             id="category"
             value={category}
           >
-            {this.categories.map(category => (
+            <option defaultValue> Select category </option>
+            {[...CATEGORIES.slice(1)].map(category => (
               <option key={`${category}`} value={`${category}`}>
                 {`${category}`}
               </option>
@@ -85,6 +77,8 @@ class BookForm extends React.Component {
           <button type="submit" value="submit">
             Submit
           </button>
+          <p id="alert-text-title" className="alert-hidden">Please write a title for the book you want to add.</p>
+          <p id="alert-text-category" className="alert-hidden">Please select a category for the book you want to add.</p>
         </form>
         <p id="alert-text-title" className="alert-hidden">
           Please write a title for the book you want to add.
