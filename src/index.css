@@ -174,7 +174,7 @@ body {
   width: 90px;
   height: 90px;
   margin-top: 38px;
-  margin-left: 350px;
+  margin-left: 100px;
   color: #fff;
   text-align: center;
   display: flex;
@@ -190,7 +190,7 @@ body {
 }
 
 .book-title {
-  width: 197px;
+  width: 440px;
   height: 29px;
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
@@ -199,7 +199,7 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  color: var(--black-three);
+  overflow: hidden;
 }
 
 .book-author {
@@ -238,4 +238,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-right: 220px;
+}
+
+.Line-2 {
+  width: 2px;
+  height: 24px;
+  border: solid 1px #e8e8e8;
 }
