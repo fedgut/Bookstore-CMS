@@ -16,14 +16,14 @@ body {
 }
 
 .Bookstore-CMS {
-  width: 1600px;
+  width: 100%;
   padding-top: 147px;
   background-color: #f5f6fa;
   margin: 0 auto;
 }
 
 .panel-bg {
-  width: 1400px;
+  width: 87%;
   border-radius: 4px;
   margin: 0 auto;
   background-color: #fafafa;
@@ -31,25 +31,33 @@ body {
 }
 
 .panel-nav {
-  width: 1400px;
+  width: 100%;
   height: 95px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .bookstore-logo {
-  width: 240px;
-  height: 37px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
-  margin: 29px -10px 29px 100px;
+  margin: 29px 0 29px 0;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 500px;
 }
 
 .books-button {
@@ -63,7 +71,7 @@ body {
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
-  margin: 41px 0 38px 47px;
+  margin: 41px 0 38px 0;
 }
 
 .categories-button {
@@ -78,7 +86,7 @@ body {
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
-  margin: 41px 0 38px 41px;
+  margin: 41px 0 38px 0;
   background-color: inherit;
 }
 
@@ -86,11 +94,11 @@ body {
   width: 17px;
   height: 17px;
   color: #0290ff;
-  margin: 37px 113px 41px 670px;
+  margin: 37px 113px 41px 0;
 }
 
 .li-panel {
-  width: 1200px;
+  width: 85.7%;
   height: 170px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -102,8 +110,6 @@ body {
 }
 
 .category {
-  width: 49px;
-  height: 18px;
   opacity: 0.5;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -116,14 +122,17 @@ body {
 }
 
 .book-data {
-  margin: 32px 0 0 27px;
+  margin: 32px 0 30px 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .book-progress {
   display: flex;
   flex-direction: column;
   width: 184px;
-  margin: 33px 147px 0 0;
+  margin: 33px 0 0 0;
   padding-left: 59px;
 }
 
@@ -177,7 +186,6 @@ body {
   width: 90px;
   height: 90px;
   margin-top: 38px;
-  margin-left: 100px;
   color: #fff;
   text-align: center;
   display: flex;
@@ -193,8 +201,6 @@ body {
 }
 
 .book-title {
-  width: 440px;
-  height: 29px;
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
   font-weight: bold;
@@ -206,8 +212,6 @@ body {
 }
 
 .book-author {
-  width: 107px;
-  height: 19px;
   font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 300;
@@ -216,7 +220,6 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
-  margin-bottom: 21px;
 }
 
 .book-options {
@@ -241,7 +244,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 220px;
 }
 
 .Line-2 {
