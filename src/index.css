@@ -17,13 +17,13 @@ body {
 
 .Bookstore-CMS {
   width: 100%;
-  padding-top: 147px;
+  padding-top: 50px;
   background-color: #f5f6fa;
   margin: 0 auto;
 }
 
 .panel-bg {
-  width: 87%;
+  width: 95%;
   border-radius: 4px;
   margin: 0 auto;
   background-color: #fafafa;
@@ -202,6 +202,7 @@ body {
 
 .book-title {
   font-family: 'Roboto Slab', serif;
+  width: 440px;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
