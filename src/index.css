@@ -35,8 +35,10 @@ body {
   border-radius: 4px;
   margin: 0 auto;
   background-color: #fafafa;
-  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
-    0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12),
+    0 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
 
 .panel-nav {
@@ -191,8 +193,10 @@ body {
 
 .place-holder-square {
   background-color: #0290ff;
-  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
-    0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12),
+    0 11px 15px -7px rgba(0, 0, 0, 0.2);
   max-width: 90px;
   min-width: 90px;
   height: 90px;
@@ -284,7 +288,6 @@ body {
 
 .form-container {
   border-top: solid 1px #e8e8e8;
-  margin: 40px 100px;
   padding-bottom: 65px;
   width: 85.7%;
   min-width: 900px;
@@ -348,4 +351,8 @@ body {
 .form {
   display: flex;
   justify-content: space-between;
+}
+
+.form-margin {
+  margin: 40px 0 0 100px;
 }
