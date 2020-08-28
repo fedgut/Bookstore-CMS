@@ -26,14 +26,16 @@ function Book(props) {
           <span className="book-options">Edit</span>
         </div>
       </div>
-      <div className="place-holder-square">Place Holder Square</div>
-      <div className="separation-bar" />
-      <div className="book-progress">
-        <span className="current-chapter">CURRENT CHAPTER</span>
-        <span className="chapter">Chapter 17</span>
-        <button className="button-text" variant="primary" type="button">
-          UPDATE PROGRESS
-        </button>
+      <div className="right-group">
+        <div className="place-holder-square">Place Holder Square</div>
+        <div className="separation-bar" />
+        <div className="book-progress">
+          <span className="current-chapter">CURRENT CHAPTER</span>
+          <span className="chapter">Chapter 17</span>
+          <button className="button-text" variant="primary" type="button">
+            UPDATE PROGRESS
+          </button>
+        </div>
       </div>
     </li>
   );

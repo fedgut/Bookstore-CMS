@@ -47,18 +47,19 @@ class BooksList extends React.Component {
     return (
       <div>
         <nav className="panel-nav">
-          <div className="navbar-container">
-            <div className="bookstore-logo">Bookstore CMS</div>
-            <div className="books-button">BOOKS</div>
-            <CategoryFilter handleChange={this.handleChange} />
-          </div>
+          <div className="nav-container">
+            <div className="navbar-container">
+              <div className="bookstore-logo">Bookstore CMS</div>
+              <div className="books-button">BOOKS</div>
+              <CategoryFilter handleChange={this.handleChange} />
+            </div>
 
-          <div className="user-icon">
-            <i className="fa fa-user" />
+            <div className="user-icon">
+              <i className="fa fa-user" />
+            </div>
           </div>
         </nav>
         <ul className="book-list">{this.filterHelper(books, filters)}</ul>
-
       </div>
     );
   }

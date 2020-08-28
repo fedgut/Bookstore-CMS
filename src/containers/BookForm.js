@@ -53,7 +53,7 @@ class BookForm extends React.Component {
     return (
       <div className="form-container">
         <h2 className="add-book">ADD NEW BOOK</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="title"
@@ -80,8 +80,12 @@ class BookForm extends React.Component {
           <button type="submit" value="submit" className="add-book-button">
             Submit
           </button>
-          <p id="alert-text-title" className="alert-hidden">Please write a title for the book you want to add.</p>
-          <p id="alert-text-category" className="alert-hidden">Please select a category for the book you want to add.</p>
+          <p id="alert-text-title" className="alert-hidden">
+            Please write a title for the book you want to add.
+          </p>
+          <p id="alert-text-category" className="alert-hidden">
+            Please select a category for the book you want to add.
+          </p>
         </form>
         <p id="alert-text-title" className="alert-hidden">
           Please write a title for the book you want to add.
