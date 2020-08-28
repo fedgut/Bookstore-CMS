@@ -53,50 +53,50 @@ class BookForm extends React.Component {
     return (
       <div className="form-margin">
         <div className="form-container">
-                <h2 className="add-book">ADD NEW BOOK</h2>
-                <form className="form" onSubmit={this.handleSubmit}>
-                  <input
-                    type="text"
-                    name="title"
-                    id="title"
-                    placeholder="Title"
-                    value={title}
-                    className="add-book-input"
-                    onChange={this.handleChange}
-                  />
-                  <select
-                    onChange={this.handleChange}
-                    name="category"
-                    id="category"
-                    value={category}
-                    className="category-select"
-                  >
-                    <option defaultValue> Select category </option>
-                    {[...CATEGORIES.slice(1)].map(category => (
-                      <option key={`${category}`} value={`${category}`}>
-                        {`${category}`}
-                      </option>
-                    ))}
-                  </select>
-                  <button type="submit" value="submit" className="add-book-button">
-                    Submit
-                  </button>
-                  <p id="alert-text-title" className="alert-hidden">
-                    Please write a title for the book you want to add.
-                  </p>
-                  <p id="alert-text-category" className="alert-hidden">
-                    Please select a category for the book you want to add.
-                  </p>
-                </form>
-                <p id="alert-text-title" className="alert-hidden">
-                  Please write a title for the book you want to add.
-                </p>
-                <p id="alert-text-category" className="alert-hidden">
-                  Please select a category for the book you want to add.
-                </p>
-              </div>
+          <h2 className="add-book">ADD NEW BOOK</h2>
+          <form className="form" onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+              value={title}
+              className="add-book-input"
+              onChange={this.handleChange}
+            />
+            <select
+              onChange={this.handleChange}
+              name="category"
+              id="category"
+              value={category}
+              className="category-select"
+            >
+              <option defaultValue> Select category </option>
+              {[...CATEGORIES.slice(1)].map(category => (
+                <option key={`${category}`} value={`${category}`}>
+                  {`${category}`}
+                </option>
+              ))}
+            </select>
+            <button type="submit" value="submit" className="add-book-button">
+              Submit
+            </button>
+            <p id="alert-text-title" className="alert-hidden">
+              Please write a title for the book you want to add.
+            </p>
+            <p id="alert-text-category" className="alert-hidden">
+              Please select a category for the book you want to add.
+            </p>
+          </form>
+          <p id="alert-text-title" className="alert-hidden">
+            Please write a title for the book you want to add.
+          </p>
+          <p id="alert-text-category" className="alert-hidden">
+            Please select a category for the book you want to add.
+          </p>
+        </div>
       </div>
-      );
+    );
   }
 }
 
