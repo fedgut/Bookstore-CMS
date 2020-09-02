@@ -4,6 +4,7 @@ body {
 
 .alert {
   color: red;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .alert-hidden {
@@ -12,4 +13,346 @@ body {
 
 .alert-border {
   border-color: red;
+}
+
+.Bookstore-CMS {
+  width: 100%;
+  padding-top: 50px;
+  background-color: #f5f6fa;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  width: 85.7%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.panel-bg {
+  width: 95%;
+  min-width: 1100px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-shadow:
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12),
+    0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.panel-nav {
+  width: 100%;
+  height: 95px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bookstore-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin: 29px 0 29px 0;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 500px;
+}
+
+.books-button {
+  width: 59px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin: 41px 0 38px 0;
+}
+
+.categories-button {
+  border: none;
+  height: 16px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin: 41px 0 38px 0;
+  background-color: inherit;
+}
+
+.user-icon {
+  width: 17px;
+  height: 17px;
+  color: #0290ff;
+  margin: 37px 0 41px 0;
+}
+
+.li-panel {
+  width: 85.7%;
+  min-width: 900px;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.category {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-data {
+  margin: 32px 0 30px 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-progress {
+  display: flex;
+  flex-direction: column;
+  width: 184px;
+  margin: 33px 0 0 0;
+}
+
+.current-chapter {
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin-bottom: 7px;
+}
+
+.chapter {
+  height: 21px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-bottom: 23px;
+}
+
+.button-text {
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+}
+
+.place-holder-square {
+  background-color: #0290ff;
+  box-shadow:
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12),
+    0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  max-width: 90px;
+  min-width: 90px;
+  height: 90px;
+  margin-top: 38px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.separation-bar {
+  margin-top: 38px;
+  height: 90px;
+  border-right: solid 1px #e8e8e8;
+}
+
+.book-title {
+  font-family: 'Roboto Slab', serif;
+  width: 440px;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  overflow: hidden;
+}
+
+.book-author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-options {
+  height: 19px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.remove {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+}
+
+.book-options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 250px;
+}
+
+.Line-2 {
+  width: 2px;
+  height: 24px;
+  border: solid 1px #e8e8e8;
+}
+
+.book-list {
+  padding: 0;
+  margin-left: 100px;
+}
+
+.add-book {
+  width: 190px;
+  height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.form-container {
+  border-top: solid 1px #e8e8e8;
+  padding-bottom: 65px;
+  width: 85.7%;
+  min-width: 900px;
+}
+
+.vertical-line {
+  border: solid 1px #e8e8e8;
+}
+
+.add-book-input {
+  width: 50%;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 20px;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.category-select {
+  width: 20%;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 20px;
+  letter-spacing: -0.15px;
+  color: #999;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 34px;
+}
+
+.add-book-button {
+  width: 15%;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  margin-left: 34px;
+}
+
+.right-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 50px;
+  min-width: 400px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-margin {
+  margin: 40px 0 0 100px;
 }

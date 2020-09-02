@@ -5,8 +5,11 @@ import { CATEGORIES } from '../constants';
 export default function CategoryFilter(props) {
   const { handleChange } = props;
   return (
-    <select onChange={handleChange}>
-      {['All', ...CATEGORIES].map(category => (
+    <select className="categories-button" onChange={handleChange}>
+      <option default value="All Books">
+        CATEGORIES
+      </option>
+      {CATEGORIES.map(category => (
         <option key={category} value={`${category}`}>
           {category}
         </option>

@@ -25,7 +25,4 @@ In the command line run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Current State
-
-- Bomponents, containers and reducers are complete
-- Developing Style according to client requirements 
+## Linted with ESLINT and STYLELINT

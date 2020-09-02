@@ -4,9 +4,12 @@ import BooksList from '../containers/BooksList';
 
 function App() {
   return (
-    <div className="App">
-      <BooksList />
-      <BooksForm />
+    <div className="App Bookstore-CMS">
+      <div className="panel-bg">
+        <BooksList />
+        <BooksForm />
+      </div>
+
     </div>
   );
 }
