@@ -27,9 +27,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Using the App
 
-### Filter books by category (Top-Center)
-### Remove a book (Remove Button in the left)
-### Add new books (Bottom form)
+- Filter books by category (Top-Center)
+- Remove a book (Remove Button in the left)
+- Add new books (Bottom form)
 
 ## TODOs
 
