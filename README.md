@@ -15,6 +15,7 @@
 
 ## Live Version
 - [Heroku](https://magic-bookstore10.herokuapp.com/)
+![screenshot1](./screenshot.png)
 
 ## Run it
 
